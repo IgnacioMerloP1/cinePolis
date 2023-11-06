@@ -1,0 +1,309 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.nav-movil{
+  display: none;
+}
+
+
+/*Estilos para la navbar*/
+.logo{
+  height: 3rem;
+  width: 10rem;
+}
+
+header{
+  position: sticky; /*PROPIEDAD PARA QUE LA NAVBAR BAJE AL HACER SCROLL*/
+  top: 0;
+}
+
+.menu{
+  position: sticky;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(42, 48, 56);
+  color: white;
+  height: 4rem;
+  gap: 3rem;
+  cursor: pointer;
+}
+
+.opciones{
+  background-color: rgb(42, 48, 56);
+  border-radius: 0.5rem;
+  color: white;
+  position: absolute;
+  margin: 0.5rem;
+}
+
+.display{
+  display: none;
+  text-align: start;
+  width: 9rem;
+  height: 2rem;
+  margin: 1rem;
+  color: white;
+}
+
+.navbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  list-style: none;
+}
+
+.prueba:hover .display{
+  display: block;
+}
+
+.prueba:hover{
+  color: rgb(65, 81, 228);
+  cursor: pointer;
+}
+
+.searchBar{
+   height: 2.2rem;
+   width: 15rem;
+   border-radius: 10px;
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   -ms-border-radius: 10px;
+   -o-border-radius: 10px;
+   border: none;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+  background-color: rgb(63, 72, 83);
+	color: #ffffff;
+}
+
+/*Estilos para la seccion de peliculas populares*/
+.populares{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.contenedor-favoriteMovies {
+	width: 90%;
+	max-width: 1000px;
+	margin: 40px auto 100px auto;
+
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 40px;
+}
+
+.contenedor-favoriteMovies .pelicula {
+	text-align: center;
+}
+
+.contenedor-favoriteMovies .pelicula .titulo {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.contenedor-favoriteMovies .pelicula .poster {
+	width: 100%;
+	margin-bottom: 10px;
+	border-radius: 15px;
+}
+
+
+
+.pelicula:hover{
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
+
+
+/*CSS DE LOS BOTONES*/
+.buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  height: 4rem;
+  position: sticky;
+  bottom: 0;
+
+}
+
+#btnAnterior{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 2rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: rgb(76, 131, 251);
+  color: white;
+  cursor: pointer;
+}
+
+#btnSiguiente{  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 2rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: rgb(76, 131, 251);
+  color: white;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*FOOTER*/
+.foot{
+  background-color: rgb(42, 48, 56);
+  justify-content: center;
+  display: flex;
+  color: rgb(221, 221, 221);
+  gap: 2rem;
+  padding: 100px;
+}
+
+/*MEDIA QUERIE PARA QUE CUANDO EL WIDTH ESTE DEL TAMAÑO DE UN DISPOSITIVO MOVIL SE CAMBIE*/
+@media (max-width: 768px){
+  .menu{
+    display: none;
+  }
+
+  .nav-movil{
+   display: flex;
+   justify-content: end;
+  }
+
+  .menu-movil {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: black;
+    transition: left 0.3s;
+    z-index: 2;
+  }
+  
+  #toggle-menu {
+    display: none;
+  }
+  
+  .abrir-menu {
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    background-color: black;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 2;
+    transition: left 0.3s;
+    border-radius: 20%;
+    -webkit-border-radius: 20%;
+    -moz-border-radius: 20%;
+    -ms-border-radius: 20%;
+    -o-border-radius: 20%;
+}
+  
+  .abrir-menu::after {
+    content: attr(data-open);
+  }
+  
+  #toggle-menu:checked+.abrir-menu::after {
+    content: attr(data-close);
+  }
+  
+  .lista-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .lista-menu li {
+    padding: 10px 0;
+  }
+  
+  .lista-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    display: block;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .lista-menu a:hover {
+    background-color: #5366f5;
+  }
+  
+  #toggle-menu:checked~.menu-movil {
+    left: 0;
+  }
+  
+  #toggle-menu:checked~.abrir-menu {
+    left: 250px;
+  }
+  
+  #toggle-menu:checked~.contenido {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  .contenido {
+    transition: background-color 0.3s;
+  }
+}

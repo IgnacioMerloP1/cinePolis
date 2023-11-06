@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/logo.jpeg" type="image/x-icon">
+    <title>Cinepolis</title>
+</head>
+<body>
+  <header>
+    <nav class="menu">
+      <img src="./images/cinepolis.png" alt="cineapolis-logo">
+        <ul class="navbar">
+            <li>Inicio</li>
+            <ul class="prueba">Peliculas
+                <div class="opciones">
+                    <a class="display">Ultimas publicadas</a>
+                    <a class="display">Estrenos</a>
+                    <a class="display">Tendencias semana</a>
+                    <a class="display">Tendencias dia</a>
+                </div>   
+            </ul>
+            <ul class="prueba">Generos
+                <div class="opciones">
+                    <a class="display" href="">Accion</a>
+                    <a class="display" href="">Animacion</a>
+                    <a class="display" href="">Crimen</a>
+                    <a class="display" href="">Aventura</a>
+                    <a class="display" href="">Drama</a>
+                    <a class="display" href="">Terror</a>
+                    <a class="display" href="">Romance</a>
+                </div>
+            </ul>
+            <ul class="prueba">Series
+                <div class="opciones">
+                    <a class="display" href="">Series</a>
+                    <a class="display" href="">Episodios</a>
+                    <a class="display" href="">Estrenos</a>
+                    <a class="display" href="">Tendencias dia</a>
+                    <a class="display" href="">Tendencias semana</a>
+                </div>
+            </ul>
+        </ul>
+        <input class="searchBar" type="search" id="search" placeholder="Search movie🔍" autocomplete="off">
+    </nav>
+
+    <div class="nav-movil">
+      <input type="checkbox" id="toggle-menu" />
+      <label
+        for="toggle-menu"
+        class="abrir-menu"
+        data-open="☰"
+        data-close="✖"
+      ></label>
+      <nav class="menu-movil">
+        <ul class="lista-menu">
+          <li><label for="btn"></label> <a class="nav-item">Inicio</a></li>
+          <li><a class="nav-item">Peliculas</a></li>
+          <li><a class="nav-item">Generos</a></li>
+          <li><a class="nav-item">Series</a></li>
+        </ul>
+      </nav>
+  </div>
+  
+      
+    
+ 
+</header>
+
+    <main>
+      <div class="populares">
+        <div class="contenedor-favoriteMovies" id="contenedor-favoriteMovies">
+        </div>
+        <div class="buttons">
+          <button id="btnAnterior">◀ Anterior</button>
+          <button id="btnSiguiente">Siguiente ▶</button>
+        </div>
+        
+      </div>
+
+
+    </main>
+
+
+
+
+
+
+    <footer class="foot">
+      <div class="compañia">
+          <h3 class="titulos-footer">Compañia</h3>
+          <p>Acerca de</p>
+          <p>Empleo</p>
+      </div>
+      <div class="comunidades">
+          <h3 class="titulos-footer">Para artistas</h3>
+          <p>Desarrolladores</p>
+          <p>Publicidad</p>
+          <p>Inversionistas</p>
+          <p>Proveedores</p>
+      </div>
+      <div class="enlaces">
+          <h3 class="titulos-footer">Enlaces útiles </h3>
+          <p>Ayuda</p>
+          <p>Reproductor web</p>
+          <p>App móvil gratis</p>
+      </div>
+  </footer>
+
+    <script src="./main.js"></script>
+</body>
+</html>
